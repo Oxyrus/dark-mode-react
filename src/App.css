@@ -1,3 +1,15 @@
+/* Color variables */
+html {
+  --primary-color: #282c34;
+  --secondary-color: #fff;
+}
+
+/* Color variables if the theme is dark */
+html[data-theme="dark"] {
+  --primary-color: #fff;
+  --secondary-color: #282c34;
+}
+
 .App {
   text-align: center;
 }
@@ -9,18 +21,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--secondary-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  color: var(--primary-color);
 }
 
 @keyframes App-logo-spin {
